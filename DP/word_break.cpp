@@ -37,4 +37,35 @@ public:
 
     }
 
+    /* 
+        Another solution
+     bool wordBreak(string s, unordered_set<string>& wordDict) {
+
+        int ss = s.length();
+
+        vector<bool> dp(ss + 1, false);
+
+        dp[ss] = true;
+
+        for(int i = ss; i >= 0; i --){
+
+            if( i < ss && (!dp[i])) continue;
+
+            for(int j = i - 1; j >= 0 ; j --)
+
+                if(wordDict.find(s.substr(j, i - j)) != wordDict.end()){
+
+                    dp[j] = true;
+
+                }
+
+        }
+
+        return dp[0];
+
+    }
+    */
+
+
+
 };
